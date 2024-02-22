@@ -61,7 +61,7 @@ class Grade(Base):
 
 
 # З'єднання з базою даних
-engine = create_engine('postgresql://postgres:My5aK8_U91veR5ty@localhost:5432/fake_universaty.db')
+engine = create_engine('postgresql://postgres:My5aK8_U91veR5ty@localhost:5432/fake_universaty')
 Base.metadata.create_all(engine)
 
 Session = sessionmaker(bind=engine)
