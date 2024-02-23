@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 
 
 # Підключення до бази даних
-engine = create_engine('postgresql://postgres:My5aK8_U91veR5ty@localhost:5432/fake_universaty')
+engine = create_engine("postgresql://postgres:My5aK8_U91veR5ty@localhost:5432/fake_universaty")
 Base.metadata.bind = engine
 
 # Створення сесії
@@ -19,7 +19,7 @@ fake = Faker()
 
 def create_students(groups):
     students = []
-    for _ in range(30, 51):
+    for _ in range(30):
         student = Student(name=fake.name(), group_id=random.choice(groups).id)
         students.append(student)
         session.add(student)
